@@ -11,12 +11,11 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/82f797382f.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
   <header>
     <div class="hop-logo">
-        <img class="hop-circle-logo" src="crafty_hop_assets/hop-logo-mark.png" alt="The Crafty Hop Hunter Logo" width="200" height="150">
+        <img class="hop-circle-logo" src="images/hop-logo-mark.png" alt="The Crafty Hop Hunter Logo" width="200" height="150">
     </div>
     <nav class="navbar">
         <div class="logo_header">
@@ -46,38 +45,23 @@
     </nav>
     <div class="social-sidebar">
         <div class="instagram-logo">
-            <img src="crafty_hop_assets/instagram-logo.png" alt="Instagram Logo"width="40" height="40">
+            <img src="images/instagram-logo.png" alt="Instagram Logo"width="40" height="40">
         </div>
         <div class="facebook-logo">
-            <img src="crafty_hop_assets/facebook-logo.png" alt="Facebook Logo" width="40" height="40">
+            <img src="images/facebook-logo.png" alt="Facebook Logo" width="40" height="40">
         </div>
      </div>    
 </header>
     <main>
-        <div class="banner-search">
-            <img src="crafty_hop_assets/hop-logo-main.png" alt="The Crafty Hop Hunter Full Logo" width="800" height="250">
+        <div class="banner-beer">
+            <img src="images/hop-logo-main.png" alt="The Crafty Hop Hunter Full Logo" class="full-logo" width="800" height="250">
         </div>
-        <section class="search-section">
-            <br>
-            <br>
-            <h2>Find the nearest brewery with just one tap.</h2>
-            <img src="crafty_hop_assets/hop-logo-red.png" class="search-logo" alt="The Crafty Hop Hunter Search Logo" width="300" height="225"> 
-            <div id="beer-app">
-              <section id="beer"></section>
-              <form id="brewery-form">
-
-                <input name="search" id="zip-search" type="text" placeholder="ENTER ZIP CODE" />
-
-                <button class="search-button" type="submit">Search</button>
-              </form>
-            </div>
-            <br>
-        </section>
+        <section id="randomBeer" class="about"></section>
     </main>
     <footer>
         <p>©2022 The Crafty Hop Hunter</p>
     </footer>
-      <script src="index.js"></script>
+      <script src="randomBeer.js"></script>
       <script src="hamburger.js"></script>
 </body>
 </html>

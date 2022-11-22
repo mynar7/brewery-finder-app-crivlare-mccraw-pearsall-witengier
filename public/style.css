@@ -120,7 +120,7 @@ header ul li {
   align-items: center;
   height: 650px;
   background-position: center;
-  background-image: url('crafty_hop_assets/home-beer.jpg');
+  background-image: url('images/home-beer.jpg');
   background-size: cover;
   background-position-y: 95%;
   background-color: var(--gray);
@@ -133,7 +133,7 @@ header ul li {
   justify-content: center;
   height: 400px;
   background-position: center;
-  background-image: url('crafty_hop_assets/about-beer.jpg');
+  background-image: url('images/about-beer.jpg');
   background-size: cover;
   background-position-y: 95%;
 }
@@ -145,7 +145,7 @@ header ul li {
   justify-content: center;
   height: 400px;
   background-position: center;
-  background-image: url('crafty_hop_assets/search-beer.jpg');
+  background-image: url('images/search-beer.jpg');
   background-size: cover;
   background-position-y: 95%;
 }
@@ -157,7 +157,7 @@ header ul li {
   justify-content: center;
   height: 400px;
   background-position: center;
-  background-image: url('crafty_hop_assets/beer-page.jpg');
+  background-image: url('images/beer-page.jpg');
   background-size: cover;
   background-position-y: 95%;
 }

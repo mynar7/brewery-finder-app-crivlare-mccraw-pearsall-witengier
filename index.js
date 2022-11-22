@@ -6,6 +6,7 @@ app.listen(PORT, function() {
 })
 
 //added from other index.js
+/*
 const form = document.getElementById('brewery-form')
 const breweryURL = "https://api.openbrewerydb.org/breweries?by_postal="
 const beer = document.getElementById('beer')
@@ -50,3 +51,4 @@ function renderBreweries(breweryData, searchTerm){
     }
 
 }
+*/
