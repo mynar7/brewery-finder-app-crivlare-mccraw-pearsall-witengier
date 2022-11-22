@@ -23,6 +23,18 @@ router.get('/create-account', async (req, res) => {
   res.render('signup')
 })
 
+router.get('/search', async (req, res) => {
+  res.render('search', {layout: 'main' });
+})
+
+router.get('/recipes', async (req, res) => {
+  res.render('recipes', {layout: 'main' });
+})
+
+router.get('/favorites', async (req, res) => {
+  res.render('favorites', {layout: 'main' });
+})
+
 router.get('/product/:id', async (req, res) => {
   const [[product]] = await db.query(
     'SELECT * FROM inventory WHERE id=?;',
