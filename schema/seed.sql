@@ -1,4 +1,4 @@
-USE brewery_finder_app_db;
+/* USE brewery_finder_app_db;
 
 INSERT INTO inventory (name, image, description, quantity, price)
 VALUES
@@ -28,3 +28,4 @@ VALUES
   (1, 2, 1),
   (2, 4, 1),
   (2, 7, 1);
+ */
