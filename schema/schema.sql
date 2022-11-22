@@ -1,4 +1,4 @@
-USE brewery_finder_app_db;
+/* USE brewery_finder_app_db;
 
 CREATE TABLE inventory (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -28,3 +28,4 @@ CREATE TABLE cart (
     REFERENCES users(id)
     ON DELETE CASCADE
 );
+ */
