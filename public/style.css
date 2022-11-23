@@ -226,6 +226,7 @@ header ul li {
   margin: 5%;
 }
 
+
 /* Login Styling */
 #login-section {
   display: flex;
@@ -243,6 +244,7 @@ header ul li {
   text-align: center;
 }
 
+
 /* Input Styling */
 #input, #username, #password, #birthday {
   padding: 10px 24px;
@@ -255,8 +257,8 @@ header ul li {
   font-family: "Monsterrat", sans-serif; 
 }
 
-/* Button Styling */
 
+/* Button Styling */
 .button {
   padding: 10px 24px;
   background-color: var(--gray);
@@ -289,8 +291,12 @@ a {
   color: var(--gold);
 }
 
-a:hover, a:focus {
-  text-decoration: underline;
+a:hover {
+  border-radius: 50px;
+  height: 5000px;
+  width: 500px;
+  background: var(--red);
+  transition: all 0.5s ease;
   color: var(--beige);
 }
 
@@ -315,14 +321,14 @@ footer {
   width: 100vw;
   padding-top: 2%;
   padding-bottom: 2%;
-  background-color: #544E4E;
+  background-color: var(--gray);
   font-size: 20px;
 }
 
 .navbar_toggle {
   margin-left: 5%;
   font-size: 30px;
-  color: #ffffff;
+  color: var(--white);
   background: transparent;
   border-color: transparent;
   transition: all 0.3s linear;
@@ -332,7 +338,7 @@ footer {
 
 .logo{
   margin-left: 5%;
-  color: #ffffff;
+  color: var(--white);
   font-size: 25px;
   font-weight: bold;
 }
@@ -351,9 +357,9 @@ footer {
   list-style: none;
 }
 
-.main_nav li:hover{
-  background-color: #ffffff;
-}
+/* .main_nav li:hover{
+  background-color: var(--white);
+} */
 
 .main_nav li{
   display: inline;
@@ -364,9 +370,9 @@ footer {
   color: #EBAE37;
 }
 
-a:hover, a:focus {
+/* a:hover, a:focus {
   text-decoration: underline;
-}
+} */
 
 
 /* Tablet Styling */
@@ -387,7 +393,7 @@ a:hover, a:focus {
     width: 100vw;
     padding-top: 2%;
     padding-bottom: 2%;
-    background-color: #544E4E;
+    background-color: var(--gray);
     font-size: 20px;
   }
 
@@ -417,7 +423,7 @@ a:hover, a:focus {
     margin-left: 5%;
     margin-right: 5%;
     font-size: 30px;
-    color: #ffffff;
+    color: var(--white);
     background: transparent;
     border-color: transparent;
     transition: all 0.3s linear;
@@ -477,7 +483,7 @@ a:hover, a:focus {
     width: 100vw;
     padding-top: 2%;
     padding-bottom: 2%;
-    background-color: #544E4E;
+    background-color: var(--gray);
     font-size: 20px;
   }
 
@@ -507,7 +513,7 @@ a:hover, a:focus {
     margin-left: 5%;
     margin-right: 5%;
     font-size: 30px;
-    color: #ffffff;
+    color: var(--white);
     background: transparent;
     border-color: transparent;
     transition: all 0.3s linear;
@@ -544,3 +550,4 @@ a:hover, a:focus {
     opacity: 1;
   }
 }
+
