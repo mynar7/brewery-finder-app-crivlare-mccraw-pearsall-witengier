@@ -28,6 +28,11 @@ app.get('/login', (req, res) => {
   res.render('login')
 })
 
+//added for account creation
+app.get('/users', (req, res) => {
+  res.render('users')
+})
+
 app.listen(PORT, () => {
   console.log('listening on http://localhost:' + PORT)
 })

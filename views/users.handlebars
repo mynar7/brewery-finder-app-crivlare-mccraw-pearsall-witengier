@@ -12,18 +12,21 @@
       <div class="login-section">
       <img src="images/hop-logo-red.png" class="search-logo" alt="The Crafty Hop Hunter Search Logo" width="300" height="225"> 
     
-      <form id="loginForm" class="account-form" action="/api/login" method="POST">
+      <form id="signUpForm" class="account-form" action="/api/user" method="POST">
         <div class="input-group">
           <input type="text" id="username" name="username" placeholder="USERNAME" required>
         </div>
         <div class="input-group">
           <input type="password" id="password" name="password" placeholder="PASSWORD" required>
         </div>
+        <div class="input-group">
+          <input type="birthday" id="birthday" name="birthday" placeholder="BIRTHDAY" required>
+        </div>
         <button class="button">LOGIN</button>
       </form>
     </div>
     <h3>YOU MUST BE 21+ TO USE THIS SITE</h3>
-    <h4><a href="/users" type="submit">Create an account</a></h4>
+    <h4><a href="/login" type="submit">Already have an account? </a></h4>
     </section>
 </main>
 
