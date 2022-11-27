@@ -4,7 +4,7 @@ const config = process.env.JAWSDB_URL || {
   connectionLimit: 10,
   host: "localhost",
   user: "root",
-  database: "music_shop_db",
+  database: "k77eokm7ujn5908o",
 };
 const db = mysql.createPool(config);
 

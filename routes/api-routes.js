@@ -91,9 +91,8 @@ const checkAuth = require('../middleware/auth')
 
 router.post('/user', async (req, res) => {
   try {
-    console.log("did I make it?")
     const {username, password, birthday} = req.body
-    if (!(username && password && birthday)) return res.status(400).send('missing username, password or dob')
+    if (!(username && password && birthday)) return res.status(400).send('missing username, password or date of birth')
     const hash = await bcrypt.hash(password, 10)
     await db.query(
       `INSERT INTO users (username, password, dob) VALUES (?, ?, ?)`,
