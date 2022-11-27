@@ -303,15 +303,6 @@ a {
   color: var(--gold);
 }
 
-a:hover {
-  border-radius: 50px;
-  height: 5000px;
-  width: 500px;
-  background: var(--red);
-  transition: all 0.5s ease;
-  color: var(--beige);
-}
-
 
 /* Footer Styling */
 footer {
@@ -369,9 +360,9 @@ footer {
   list-style: none;
 }
 
-/* .main_nav li:hover{
-  background-color: var(--white);
-} */
+.main_nav ul, .nav_links:hover{
+  color: var(--beige);
+}
 
 .main_nav li{
   display: inline;
@@ -381,10 +372,6 @@ footer {
 .main_nav li a{
   color: #EBAE37;
 }
-
-/* a:hover, a:focus {
-  text-decoration: underline;
-} */
 
 
 /* Tablet Styling */
