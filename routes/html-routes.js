@@ -15,15 +15,15 @@ const checkAuth = require('../middleware/auth')
 //   res.render('index', data)
 // })
 
-router.get('/'), async (req,res) => {
+router.get('/', async (req,res) => {
     res.render('index')
-}
+})
 
 router.get('/login', async (req, res) => {
   res.render('login')
 })
 
-router.get('/create-account', async (req, res) => {
+router.get('/users', async (req, res) => {
   res.render('users')
 })
 
