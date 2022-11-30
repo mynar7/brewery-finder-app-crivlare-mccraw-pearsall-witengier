@@ -11,18 +11,18 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-// const sessionFavorites = new MySQLFavorites({}, db);
-// app.use(session({
-//     key: 'session_cookie',
-//     secret: process.env.SESSION_SECRET,
-//     store: sessionFavorites,
-//     resave: false,
-//     saveUninitialized: false,
-//     proxy: true,
-//     cookie: {
-//         maxAge: 1000 *60 * 60 * 24
-//     }
-// }))
+const sessionFavorites = new MySQLFavorites({}, db);
+app.use(session({
+    key: 'session_cookie',
+    secret: process.env.SESSION_SECRET,
+    store: sessionFavorites,
+    resave: false,
+    saveUninitialized: false,
+    proxy: true,
+    cookie: {
+        maxAge: 1000 *60 * 60 * 24
+    }
+}))
 
 app.engine('handlebars', exphbs.engine())
 app.set('view engine','handlebars')
