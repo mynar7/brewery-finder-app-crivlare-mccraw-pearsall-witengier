@@ -92,10 +92,11 @@ const checkAuth = require('../middleware/auth')
 router.post('/user', async (req, res) => {
   try {
     const {username, password, birthday} = req.body
-    if (!(username && password && birthday)) return res.status(400).send('missing username, password or date of birth')
+    if (!(username && password && birthday)) return res.status(400).send('missing username, password or dob')
     const hash = await bcrypt.hash(password, 10)
+    console.log("1")
     await db.query(
-      `INSERT INTO users (username, password, dob) VALUES (?, ?, ?)`,
+      `INSERT INTO users (username, password, birthday) VALUES (?, ?, ?)`,
       [username, hash, birthday]
       )
     res.redirect('/login')
@@ -119,11 +120,10 @@ router.post('/login', async (req, res) => {
   
   const isCorrectPassword = await bcrypt.compare(password, user.password)
   if (!isCorrectPassword) return res.status(400).send('incorrect login')
-    
-    req.session.loggedIn = true
-    req.session.userId = user.id
-    req.session.save(() => res.redirect('/'))
-  } catch(err) {
+  req.session.loggedIn = true
+  req.session.userId = user.id
+  req.session.save(() => res.redirect('/'))
+} catch(err) {
     res.status(500).send('Error logging in: ' + err.message || err.sqlMessage)
 }})
 
