@@ -31,10 +31,6 @@ router.get('/search', async (req, res) => {
   res.render('search', {layout: 'main' });
 })
 
-router.get('/recipes', async (req, res) => {
-  res.render('recipes', {layout: 'main' });
-})
-
 router.get('/favorites', async (req, res) => {
   res.render('favorites', {layout: 'main' });
 })

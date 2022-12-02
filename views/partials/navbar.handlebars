@@ -14,9 +14,6 @@
       <a href="/search" class="nav_links">SEARCH</a>
     </li>
     <li>
-      <a href="/recipes" class="nav_links">RECIPES</a>
-    </li>
-    <li>
       <a href="/favorites" class="nav_links">FAVORITES</a>
     </li>
     <li>
@@ -32,15 +29,14 @@
     nav.classList.toggle("show_nav")
   })
   async function logoutUser() {
-    let usersApiResult = await fetch('/api/users/logout')
+    let usersApiResult = await fetch('/api/logout')
   }
   async function verifyUserLoggedIn() {
-    let usersApiResult = await fetch('/api/users/isLoggedIn')
+    let usersApiResult = await fetch('/api/isLoggedIn')
     let usersData = await usersApiResult.json()
     let navButtonsHTML = ""
     navButtonsHTML += "<li><a href=\"/\" class=\"nav_links\">HOME</a></li>"
     navButtonsHTML += "<li><a href=\"/search\" class=\"nav_links\">SEARCH</a></li>"
-    navButtonsHTML += "<li><a href=\"/recipes\" class=\"nav_links\">RECIPES</a></li>"
     if (usersData.error) {
       navButtonsHTML += "<li><a href=\"/login\" class=\"nav_links\">LOGIN</a></li>"
     } else {

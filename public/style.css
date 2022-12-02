@@ -151,18 +151,6 @@ header ul li {
   background-position-y: 95%;
 }
 
-.banner-recipes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-  background-position: center;
-  background-image: url('images/recipes-page.jpg');
-  background-size: cover;
-  background-position-y: 95%;
-}
-
 .banner-login {
   display: flex;
   flex-direction: column;
@@ -170,7 +158,7 @@ header ul li {
   justify-content: center;
   height: 400px;
   background-position: center;
-  background-image: url('images/home-beer-blank.jpg');
+  background-image: url('images/login-page.jpg');
   background-size: cover;
   background-position-y: 95%;
 }
@@ -361,6 +349,7 @@ footer {
 
 .main_nav ul, .nav_links:hover{
   color: var(--beige);
+  border-bottom: 2px solid var(--beige);
 }
 
 .main_nav li{
@@ -426,7 +415,7 @@ footer {
 
   .nav_links:hover {
     color: var(--beige);
-    border-bottom: 3px solid var(--beige);
+    border-bottom: 2px solid var(--beige);
   }
   
   .logo_header{
@@ -437,7 +426,7 @@ footer {
     margin: 0;
   }
   
-  .banner-home img, .banner-favorites img, .banner-search img, .banner-recipes img {
+  .banner-home img, .banner-favorites img {
     height: auto;
     max-width: 100%;
   }
