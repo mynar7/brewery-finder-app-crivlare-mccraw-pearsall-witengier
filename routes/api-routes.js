@@ -94,9 +94,10 @@ router.post('/user', async (req, res) => {
     const {username, password, birthday} = req.body
     if (!(username && password && birthday)) return res.status(400).send('missing username, password or dob')
     const hash = await bcrypt.hash(password, 10)
+    const dbhash = await bcrypt.hash(birthday, 10)
     await db.query(
       `INSERT INTO users (username, password, birthday) VALUES (?, ?, ?)`,
-      [username, hash, birthday]
+      [username, hash, dbhash]
       )
     res.redirect('/login')
   } catch (err) {
