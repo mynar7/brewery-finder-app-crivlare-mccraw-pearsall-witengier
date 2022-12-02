@@ -426,7 +426,7 @@ footer {
     margin: 0;
   }
   
-  .banner-home img, .banner-favorites img {
+  .banner-home img, .banner-favorites img, .banner-search img {
     height: auto;
     max-width: 100%;
   }
