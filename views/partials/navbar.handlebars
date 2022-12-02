@@ -29,10 +29,10 @@
     nav.classList.toggle("show_nav")
   })
   async function logoutUser() {
-    let usersApiResult = await fetch('/api/users/logout')
+    let usersApiResult = await fetch('/api/logout')
   }
   async function verifyUserLoggedIn() {
-    let usersApiResult = await fetch('/api/users/isLoggedIn')
+    let usersApiResult = await fetch('/api/isLoggedIn')
     let usersData = await usersApiResult.json()
     let navButtonsHTML = ""
     navButtonsHTML += "<li><a href=\"/\" class=\"nav_links\">HOME</a></li>"

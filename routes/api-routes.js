@@ -94,7 +94,6 @@ router.post('/user', async (req, res) => {
     const {username, password, birthday} = req.body
     if (!(username && password && birthday)) return res.status(400).send('missing username, password or dob')
     const hash = await bcrypt.hash(password, 10)
-    console.log("1")
     await db.query(
       `INSERT INTO users (username, password, birthday) VALUES (?, ?, ?)`,
       [username, hash, birthday]
@@ -122,13 +121,25 @@ router.post('/login', async (req, res) => {
   if (!isCorrectPassword) return res.status(400).send('incorrect login')
   req.session.loggedIn = true
   req.session.userId = user.id
-  req.session.save(() => res.redirect('/'))
+  req.session.save(() => res.redirect('/search'))
 } catch(err) {
     res.status(500).send('Error logging in: ' + err.message || err.sqlMessage)
 }})
 
 router.get('/logout', async (req, res) => {
   req.session.destroy(() => res.redirect('/'))
+})
+
+router.get('/isLoggedIn', (req, res) => {
+  try {
+    if (req.session.loggedIn) {
+      return res.status(200).json({data: "Is loggedIn!"})
+    }
+    return res.status(400).json({error: "user not Found"})
+  }
+  catch (error) {
+    res.status(400).json({error})
+  }
 })
 
 module.exports = router
