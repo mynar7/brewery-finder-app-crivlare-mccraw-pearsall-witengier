@@ -12,15 +12,56 @@
           <img src="images/hop-logo-red.png" class="search-logo" alt="The Crafty Hop Hunter Search Logo" width="300" height="225"> 
       <div id="beer-app">
           <section id="beer"></section>
-          <form id="brewery-form">
+         
 
             <input name="search" id="input" type="text" placeholder="ENTER ZIP CODE" />
 
-            <button class="button" type="submit">SEARCH</button>
-          </form>
+            <button class="button" type="submit" onclick="getData()">SEARCH</button>
+        
         </div>
       <br>
     </section>
   </main>
 
 {{> footer}}
+
+<script>
+  async function getData() {
+    const breweryURL = "https://api.openbrewerydb.org/breweries?by_postal="
+    const zipCode = document.getElementById("input").value.trim()
+    const lnBreak = document.createElement('br')
+    if(!zipCode) return
+    try {
+      const res =  await fetch(`${breweryURL}${zipCode}`) 
+      if (res.status !== 200) {
+          throw new Error("Location not found")
+      }
+      const breweryData = await res.json()
+      console.log(breweryData)
+      renderBreweries(breweryData, zipCode)
+      beer.appendChild(lnBreak)
+      input.value = ""
+    }
+    catch (err){
+      input.value = ""
+      beer.innerHTML = err.message
+    }
+  }
+
+  function renderBreweries(breweryData, searchTerm){
+    beer.innerHTML = `<h2>Breweries near ${searchTerm}: <br><br>`
+    for (let i = 0; i < breweryData.length; i++) {
+        let h3 = document.createElement('h3')
+        h3.textContent = breweryData[i].name
+        let p = document.createElement('p')
+        p.textContent = breweryData[i].street
+        beer.appendChild(h3)
+        beer.appendChild(p)
+        const line = document.createElement('hr')
+        line.setAttribute("width", "200")
+        beer.appendChild(line)
+    }
+
+  }
+</script>
+
