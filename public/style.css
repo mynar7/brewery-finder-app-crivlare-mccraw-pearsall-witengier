@@ -18,7 +18,6 @@ h1 {
   font-family: "Playfair Display", serif; 
   font-size: 50px; 
   font-weight: bolder; 
-  line-height: 25px; 
   color: var(--red);
 }
 
@@ -102,6 +101,7 @@ header ul li {
   justify-content: flex-end;
   align-items: center;
   margin-left: 5%;
+  margin-right: 5%;
 }
 
 .instagram-logo {
@@ -188,14 +188,12 @@ header ul li {
 }
 
 .home-top {
-  margin: 5% 0 0 5%;
-  width: 60%;
-  align-items: center;  
+  margin-right: 5%;
+  width: 55%;
 }
 
 .home-aside {
   width: 30%; 
-  float: right;
 }
 
 .home-bottom {
@@ -320,12 +318,15 @@ footer {
 
 .navbar{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100vw;
   padding-top: 2%;
   padding-bottom: 2%;
   background-color: var(--gray);
   font-size: 20px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .navbar_toggle {
@@ -353,9 +354,7 @@ footer {
 
 .main_nav{
   display: flex;
-  width: 50%;
-  float: center;
-  margin-right: 25%;
+  width: 70%;
   justify-content: space-between;
   list-style: none;
 }
@@ -366,10 +365,6 @@ footer {
 
 .main_nav li{
   display: inline;
-  color: #EBAE37;
-}
-
-.main_nav li a{
   color: #EBAE37;
 }
 
@@ -396,26 +391,25 @@ footer {
     font-size: 20px;
   }
 
-  .main_nav, .social-sidebar, .facebook-logo, .instagram-logo {
+  .main_nav, .social-sidebar {
     display: none;
   }
 
   .show_nav{
-    padding-top: 2%;
+    padding-top: 5%;
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  .main_nav li{
+  .main_nav li {
     width: 100%;
     height: 50px;
     font-size: 25px;
-    justify-content: center;
     text-align: center;
-    padding: 0%;
+    padding: 20px;
   }
   
   .navbar_toggle {
@@ -428,6 +422,11 @@ footer {
     transition: all 0.3s linear;
     cursor: pointer;
     display: block;
+  }
+
+  .nav_links:hover {
+    color: var(--beige);
+    border-bottom: 3px solid var(--beige);
   }
   
   .logo_header{
