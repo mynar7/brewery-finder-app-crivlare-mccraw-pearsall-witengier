@@ -51,14 +51,14 @@
   function renderBreweries(breweryData, searchTerm){
     beer.innerHTML = `<h2>Breweries near ${searchTerm}: <br><br>`
     for (let i = 0; i < breweryData.length; i++) {
-        let h3 = document.createElement('h3')
-        h3.textContent = breweryData[i].name
-        let p = document.createElement('p')
-        p.textContent = breweryData[i].street
+        let h2 = document.createElement('h2')
+        h2.textContent = breweryData[i].name
+        let h4 = document.createElement('h4')
+        h4.textContent = breweryData[i].street
         beer.appendChild(h3)
         beer.appendChild(p)
         const line = document.createElement('hr')
-        line.setAttribute("width", "200")
+        line.setAttribute("line")
         beer.appendChild(line)
     }
 
