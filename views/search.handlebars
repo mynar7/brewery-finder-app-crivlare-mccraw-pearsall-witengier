@@ -55,13 +55,18 @@
         h2.textContent = breweryData[i].name
         let h4 = document.createElement('h4')
         h4.textContent = breweryData[i].street
-        beer.appendChild(h3)
-        beer.appendChild(p)
-        const line = document.createElement('hr')
-        line.setAttribute("line")
-        beer.appendChild(line)
+        beer.appendChild(h2)
+        beer.appendChild(h4)
+        const favButton = document.createElement('button')
+        favButton.setAttribute("class", "favButton")
+        {{!-- favButton.setAttribute('onClick', #to-do) --}}
+        favButton.setAttribute("type", "button")
+        favButton.innerHTML = "ADD TO FAVORITES!"
+        beer.appendChild(favButton)
+          const line = document.createElement('hr')
+          line.setAttribute("class", "line")
+          beer.appendChild(line)
     }
-
   }
 </script>
 
