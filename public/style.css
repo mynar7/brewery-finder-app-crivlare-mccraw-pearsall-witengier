@@ -21,37 +21,46 @@ h1 {
   color: var(--red);
 }
 
-h2, h3, h4, p, label {
-  font-family: "Montserrat", sans-serif; 
-}
-
-h1, h2, h3, label {
+h2 {
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-}
-
-h2 { 
   font-size: 22px; 
   font-weight: 400; 
   line-height: 30px; 
+  color: var(--black);
 }
 
+
 h3 { 
-  font-size: 20px; 
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 18px; 
   font-weight: 700; 
-  line-height: 25px; 
+  line-height: 25px;
+  color: var(--gold); 
 }
 
 h4 { 
+  font-family: "Montserrat", sans-serif;
   font-size: 18px; 
   font-weight: 700; 
   line-height: 25px; 
+  color: var(--gold); 
 }
 
 p { 
+  font-family: "Montserrat", sans-serif;
   font-size: 16px; 
   font-weight: 300;
   line-height: 22px;
   margin: auto;
+  color: var(--black);
+}
+
+.line {
+  color: var(--gray);
+  text-decoration-color: var(--red);
+  width: 250px;
 }
 
 
@@ -189,8 +198,8 @@ header ul li {
 } 
 
 
-/* Search Styling */
-.search-section {
+/* Search & Favorites Styling */
+.search-section, .favorites {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,14 +226,6 @@ header ul li {
 #login-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.login-section {
-  display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -257,7 +258,7 @@ header ul li {
   margin: 3%;
 }
 
-.login-button {
+.login-button, .favButton {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
@@ -329,7 +330,6 @@ footer {
 }
 
 .logo{
-  margin-left: 5%;
   color: var(--white);
   font-size: 25px;
   font-weight: bold;
@@ -359,7 +359,7 @@ footer {
 
 
 /* Tablet Styling */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 678px) {
   header {
     display: flex;
     flex-direction: column;
@@ -431,6 +431,13 @@ footer {
     max-width: 100%;
   }
 
+  .home {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
   h1 {
     font-size: 40px
   }
@@ -452,7 +459,7 @@ footer {
 
 
 /* Mobile Styling */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   header {
     display: flex;
     flex-direction: column;
@@ -514,6 +521,16 @@ footer {
     width: 100%;
     align-items: center;
     margin: 0;
+  }
+
+  .banner-home img, .banner-favorites img, .banner-search img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
   }
 
   h1 {
