@@ -7,13 +7,11 @@
   <br>
   <br>
 
-  <section id="login-section">
-    <h1>JUST ONE TAP.</h1>
-    <div class="login-section">
-      <img src="images/hop-logo-red.png" class="search-logo" alt="The Crafty Hop Hunter Search Logo" width="300"
-        height="225">
-
-      <form id="loginForm" class="account-form" action="/api/login" method="POST">
+  <section id="account-section">
+    <h1>Need to make changes to your account?</h1>
+    <br>
+    <h2>Update your password here.</h2>
+    <form id="passwordForm" class="password-form" action="/api/updatePassword" method="POST">
         <div class="input-group">
           <input type="text" id="username" name="username" placeholder="USERNAME" required>
         </div>
@@ -21,11 +19,27 @@
         <div class="input-group">
           <input type="password" id="password" name="password" placeholder="PASSWORD" required>
         </div>
-        <button class="button">LOGIN</button>
+        <div class="input-group">
+            <input type="password" id="password" name="password" placeholder="NEW PASSWORD" required>
+          </div>
+          <button class="button">UPDATE</button>
       </form>
-    </div>
-    <h3>YOU MUST BE 21+ TO USE THIS SITE</h3>
-    <h4><a href="/users" type="submit">CREATE AN ACCOUNT</a></h4>
+        <br>
+        <br>
+        <h2>We're bummed to see you go.</h2>
+    <form id="deleteForm" class="delete-form" action="/api/deleteAccount" method="POST">
+        <div class="input-group">
+          <input type="text" id="username" name="username" placeholder="USERNAME" required>
+        </div>
+        
+        <div class="input-group">
+          <input type="password" id="password" name="password" placeholder="PASSWORD" required>
+        </div>
+      </form>
+    <button class="deleteButton">DELETE ACCOUNT</button>
+      <br>
+      <br>
+      <br>
   </section>
 </main>
 

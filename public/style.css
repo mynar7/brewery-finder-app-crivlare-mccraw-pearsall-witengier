@@ -16,6 +16,7 @@ html, body {
 
 h1 { 
   font-family: "Playfair Display", serif; 
+  text-transform: uppercase;
   font-size: 50px; 
   font-weight: bolder; 
   color: var(--red);
@@ -216,14 +217,18 @@ header ul li {
 }
 
 
-/* Beer Styling */
-.beer {
-  margin: 5%;
+/* Login Styling */
+#login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 
-/* Login Styling */
-#login-section {
+/* Account Styling */
+#account-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -258,6 +263,22 @@ header ul li {
   margin: 3%;
 }
 
+.deleteButton {
+  padding: 10px 24px;
+  background-color: var(--red);
+  border-radius: 4px;
+  background-color: var(--red);
+  border-style: solid;
+  border-color: var(--gold);
+  border-width: 3px;
+  color: var(--beige);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 200ms;
+  font-family: "Monsterrat", sans-serif; 
+  margin: 1%;
+}
+
 .login-button, .favButton {
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -272,7 +293,7 @@ header ul li {
   cursor: pointer;
   transition: 200ms;
   font-family: "Monsterrat", sans-serif; 
-  margin: 3%;
+  margin: 1%;
 }
 
 .login-button:hover{
