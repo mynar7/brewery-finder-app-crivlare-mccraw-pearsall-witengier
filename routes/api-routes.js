@@ -143,10 +143,10 @@ router.get('/isLoggedIn', (req, res) => {
   }
 })
 
-/* router.get('/updatepassword', (req, res) => {
+router.post('/updatePassword', async (req, res) => {
   try {
-    const {username, password} = req.body
-    if (!(username && password)) return res.status(400).send('missing username, password')
+    const {username, password, newPassword} = req.body
+    if (!(username && password, newPassword)) return res.status(400).send('missing username, current password, and new password')
     const [[user]] = await db.query(
       `SELECT * FROM users WHERE username=?`,
       [username]
@@ -154,19 +154,41 @@ router.get('/isLoggedIn', (req, res) => {
     if (!user) return res.status(400).send('user not found')
   
   const isCorrectPassword = await bcrypt.compare(password, user.password)
-  if (!isCorrectPassword) return res.status(400).send('incorrect login')
+  if (!isCorrectPassword) return res.status(400).send('current password incorrect')
   
-    const hash = await bcrypt.hash(password, 10)
+    const newhash = await bcrypt.hash(newPassword, 10)
     await db.query(
-      `INSERT INTO users (username, password, birthday) VALUES (?, ?, ?)`,
-      [username, hash]
+      `UPDATE users SET password = ? WHERE username = ?`,
+      [newhash, username]
       )
-    res.redirect('/login')
+    res.redirect('/account')
   } catch (err) {
-      if (err.code === 'ER_DUP_ENTRY') 
-        return res.status(409).send('the user exists already')
-      res.status(500).send('Error creating user: ' + err.message || err.sqlMessage)
+      res.status(500).send('Error updating user: ' + err.message || err.sqlMessage)
     }
-}) */
+})
+
+router.post('/deleteAccount', async (req, res) => {
+  try {
+    const {username, password} = req.body
+    if (!(username && password)) return res.status(400).send('missing username, and password')
+    const [[user]] = await db.query(
+      `SELECT * FROM users WHERE username=?`,
+      [username]
+    )
+    if (!user) return res.status(400).send('user not found')
+  
+  const isCorrectPassword = await bcrypt.compare(password, user.password)
+  if (!isCorrectPassword) return res.status(400).send('password incorrect')
+  
+    await db.query(
+      `DELETE FROM users WHERE username=?`,
+      [username]
+      )
+      req.session.destroy(() => res.redirect('/users'))
+  } catch (err) {
+      res.status(500).send('Error deleting user: ' + err.message || err.sqlMessage)
+    }
+})
+
 
 module.exports = router

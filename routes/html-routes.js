@@ -2,19 +2,6 @@ const router = require('express').Router()
 const db = require('../db')
 const checkAuth = require('../middleware/auth')
 
-// router.get('/', async (req, res) => {
-//   const [rows] = await db.query('SELECT * FROM inventory;')
-//   const data = {items: rows, loggedIn: req.session.loggedIn}
-//   if (req.session.loggedIn) {
-//     const [[{cartCount}]] = await db.query(
-//       'SELECT SUM(quantity) AS cartCount FROM cart WHERE user_id=?;',
-//       [req.session.userId]
-//     )
-//     data.cartCount = cartCount || 0
-//   }
-//   res.render('index', data)
-// })
-
 router.get('/', async (req,res) => {
     res.render('index')
 })
