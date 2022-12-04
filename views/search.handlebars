@@ -50,12 +50,6 @@
   }
 
   function renderBreweries(breweryData, searchTerm){
-    console.log(breweryData.length)
-    if(breweryData.length=0) {
-        beer.innerHTML = `<h2>Bummer, no breweries found in ${searchTerm}. <br><br>`
-        input.value = ""
-          return
-      }
     beer.innerHTML = `<h2>Breweries near ${searchTerm}: <br><br>`
     for (let i = 0; i < breweryData.length; i++) {
         let h2 = document.createElement('h2')
