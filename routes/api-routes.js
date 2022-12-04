@@ -143,7 +143,7 @@ router.get('/isLoggedIn', (req, res) => {
   }
 })
 
-router.get('/updatepassword', (req, res) => {
+/* router.get('/updatepassword', (req, res) => {
   try {
     const {username, password} = req.body
     if (!(username && password)) return res.status(400).send('missing username, password')
@@ -167,6 +167,6 @@ router.get('/updatepassword', (req, res) => {
         return res.status(409).send('the user exists already')
       res.status(500).send('Error creating user: ' + err.message || err.sqlMessage)
     }
-})
+}) */
 
 module.exports = router
