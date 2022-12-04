@@ -9,6 +9,7 @@ Users will also have the ability to update their password and delete their accou
 Group Challenges:
 1. While we were able to complete a brewery search using the API, we could not connect the data to the favorites button and render to the Favorites page.
 2. The error message if there are no breweries found for the Search page is not posting properly.
+3. Deploying to Heroku presented an error that we have not encountered prior to this assignment.
 
 
 ![Home Banner](https://user-images.githubusercontent.com/97287195/205517591-15b51982-1fdd-44ae-8cf3-15a1f97c0d1e.png)
@@ -24,6 +25,10 @@ Group Challenges:
 ![Favorites](https://user-images.githubusercontent.com/97287195/205517861-0ef14b6c-8c3a-458c-a3e0-d8b1747b47ca.png)
 
 ![Account](https://user-images.githubusercontent.com/97287195/205517873-2ddadacf-7425-42c2-89eb-a0ecd542cfeb.png)
+
+![Heroku Error Message](https://user-images.githubusercontent.com/97287195/205523028-97c80aaf-c6b9-4ca1-bc32-a6775409f1db.png)
+
+![Heroku Error Message 2](https://user-images.githubusercontent.com/97287195/205523103-c88ab983-b9c6-409f-b0fa-22eb57190cd6.png)
 
 
 
