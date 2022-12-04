@@ -298,8 +298,9 @@ footer {
   text-align: center;
   text-transform: uppercase;
   color: var(--gold);
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  top: 0px;
+  margin-bottom: 0px;
   width: 100%;  
 }
 
