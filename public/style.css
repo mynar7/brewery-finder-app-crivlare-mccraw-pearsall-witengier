@@ -238,7 +238,7 @@ header ul li {
 
 
 /* Input Styling */
-#input, #username, #password, #birthday {
+#input, #username, #password, #newPassword, #birthday {
   padding: 10px 24px;
   font-size: 1rem;
   margin: auto auto 10px auto;
