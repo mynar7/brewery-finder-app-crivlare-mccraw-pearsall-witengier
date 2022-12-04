@@ -35,6 +35,10 @@ router.get('/favorites', async (req, res) => {
   res.render('favorites', {layout: 'main' });
 })
 
+router.get('/account', async (req, res) => {
+  res.render('account', {layout: 'main'});
+})
+
 // router.get('/product/:id', async (req, res) => {
 //   const [[product]] = await db.query(
 //     'SELECT * FROM inventory WHERE id=?;',
